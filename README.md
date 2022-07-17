@@ -39,3 +39,26 @@ Acceptance criteria:
 2. As a user I should be able to view only 8 products per page on the dashboard.
 3. The product results should be paginated and there should be a next and previous button at the bottom of the product list to
    navigate to next page and show next 8 products.
+
+**STR-US3. As a user, when I click on a product on the dashboard, it should me the details of the product**
+
+Acceptance criteria:
+
+1. A user clicks on a product image on the dashboard.
+2. The user is navigated to the products page where the product image, title, descritpion, category and price are shown.
+3. A button `Add to cart` is shown below the product details.
+4. When the user clicks on the `Add to cart` button, the product is added to the user's cart. _(This functionality can be either mocked or you can implement this via React Context API)_
+
+_Option 1: Mock the functionality [Complexity: Easy]_
+
+- Make an api call to fake-store-api to add new product to the cart as shown [here](https://fakestoreapi.com/docs#c-new).
+- Store the response and either show it as a modal or an alert (you can use React-Bootstrap [Modal](https://react-bootstrap.github.io/components/modal/) or [Alert](https://react-bootstrap.github.io/components/alerts/) components).
+- On clicking back, the user should be navigated back to dashboard.
+
+_Option 2: Use Context API [Complexity: Hard]_
+
+- Create a Context named - CartContext.
+- CartContext should store array of Products.
+- When a user adds product to cart, the product including its details should be added to the context.
+- These details should persist when the user is navigated back to the dashboard
+- [BONUS]: In the Navbar or Floating action button, you can display the total number of products in the cart.

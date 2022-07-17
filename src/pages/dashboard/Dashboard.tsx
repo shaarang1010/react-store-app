@@ -8,7 +8,6 @@ const getAllProducts = async () => {
   return await httpRequest("https://fakestoreapi.com/products").catch((err) => {
     throw new Error(err.message);
   });
-  //return response;
 };
 
 const Dashboard = () => {
