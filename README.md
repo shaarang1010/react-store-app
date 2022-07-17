@@ -24,6 +24,7 @@ Clone the repo and install dependencies using the following cmd - `npm install` 
 ### User stories
 
 **STR-US1. As a user, I would like to view all products in the online store**
+
 Acceptance criteria:
 
 1. As a user I should be able login using my credentials and view the dashboard.
@@ -31,6 +32,7 @@ Acceptance criteria:
 3. Each product should have a title, image and price.
 
 **STR-US2. As a user, I would like to view only 8 products on a page**
+
 Acceptance criteria:
 
 1. As a user I should be able login using my credentials and view the dashboard.
