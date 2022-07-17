@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# React + Typescript Ecommerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Bootstraped with Create-React-App**
 
-## Available Scripts
+### Dependencies
 
-In the project directory, you can run:
+- React and React Dom v18.x
+- react-router-dom@6
+- react-bootstrap
+- react-testing-library
 
-### `npm start`
+### API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Fake-Store-API](https://fakestoreapi.com/docs)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/1486577-f171c6e2-10ab-4349-bc10-9db4449da719?action=collection%2Ffork&collection-url=entityId%3D1486577-f171c6e2-10ab-4349-bc10-9db4449da719%26entityType%3Dcollection%26workspaceId%3D18e6f11c-8e45-4bea-b35a-8f6ad5fa2c29)
 
-### `npm test`
+### Get Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have Nodejs installed.[Nodejs](https://nodejs.org/en/)
 
-### `npm run build`
+Clone the repo and install dependencies using the following cmd - `npm install` or using yarn `yarn install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### User stories
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**STR-US1. As a user, I would like to view all products in the online store**
+Acceptance criteria:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. As a user I should be able login using my credentials and view the dashboard.
+2. As a user I should be able to view all the products on the dashboard.
+3. Each product should have a title, image and price.
 
-### `npm run eject`
+**STR-US2. As a user, I would like to view only 8 products on a page**
+Acceptance criteria:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. As a user I should be able login using my credentials and view the dashboard.
+2. As a user I should be able to view only 8 products per page on the dashboard.
+3. The product results should be paginated and there should be a next and previous button at the bottom of the product list to
+   navigate to next page and show next 8 products.
