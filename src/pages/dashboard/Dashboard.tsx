@@ -24,7 +24,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <Row>
+    <Row className="mt-3">
       {!listOfProducts && <h2>Loading....</h2>}
       {listOfProducts &&
         listOfProducts.map((product) => (

@@ -21,8 +21,12 @@ export const CardComponent: React.FC<CardComponentProps> = ({
   handlerText,
 }) => {
   return (
-    <Card style={{ width: "24rem" }}>
-      <Card.Img variant="top" src={cardImg} />
+    <Card>
+      <Card.Img
+        variant="top"
+        src={cardImg}
+        style={{ width: "60%", height: "60%" }}
+      />
       <Card.Body>
         <Card.Title>
           <>
