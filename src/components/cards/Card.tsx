@@ -8,6 +8,7 @@ type CardComponentProps = {
   cardTitle?: string;
   cardInfo?: React.ReactNode;
   cardBadgeText?: string;
+  onImageClickHandler?(): void;
   onClickHandler(e: React.MouseEvent<HTMLButtonElement>): void;
   handlerText?: string;
 };
@@ -19,6 +20,7 @@ export const CardComponent: React.FC<CardComponentProps> = ({
   cardBadgeText,
   onClickHandler,
   handlerText,
+  onImageClickHandler,
 }) => {
   return (
     <Card>
@@ -26,6 +28,7 @@ export const CardComponent: React.FC<CardComponentProps> = ({
         variant="top"
         src={cardImg}
         style={{ width: "60%", height: "60%" }}
+        onClick={onImageClickHandler}
       />
       <Card.Body>
         <Card.Title>

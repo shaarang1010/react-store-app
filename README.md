@@ -11,6 +11,10 @@
 
 ### API
 
+We are using a Fake store api to retrieve list of products, add products to cart, user details, etc.
+
+You can access the api below. Also, available is postman collection.
+
 [Fake-Store-API](https://fakestoreapi.com/docs)
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/1486577-f171c6e2-10ab-4349-bc10-9db4449da719?action=collection%2Ffork&collection-url=entityId%3D1486577-f171c6e2-10ab-4349-bc10-9db4449da719%26entityType%3Dcollection%26workspaceId%3D18e6f11c-8e45-4bea-b35a-8f6ad5fa2c29)
@@ -61,4 +65,12 @@ _Option 2: Use Context API [Complexity: Hard]_
 - CartContext should store array of Products.
 - When a user adds product to cart, the product including its details should be added to the context.
 - These details should persist when the user is navigated back to the dashboard
-- [BONUS]: In the Navbar or Floating action button, you can display the total number of products in the cart.
+- [BONUS]: In the Navbar, you can display the total number of products in the cart.
+
+**STR-US4. As a user, I would like to sort products on dashboard in either accending or descending order**
+
+Acceptance criteria:
+
+1. Add a dropdown, with options to Sort - ASC, Sort-DESC.
+2. The dropdown should be added below the navbar and floated to right. You can use `flex justify-content-end` class or `float:right`.
+3. When the user chooses `SORT-ASC` the products should be sorted by their price in ascending order. When user chooses `SORT-DESC` the products on dashboard should be sorted according to their prices in descending order.
