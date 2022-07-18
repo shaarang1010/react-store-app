@@ -27,7 +27,7 @@ Clone the repo and install dependencies using the following cmd - `npm install` 
 
 ### User stories
 
-##### STR-US1. As a user, I would like to view all products in the online store
+#### STR-US1. As a user, I would like to view all products in the online store
 
 Acceptance criteria:
 
@@ -35,7 +35,9 @@ Acceptance criteria:
 2. As a user I should be able to view all the products on the dashboard.
 3. Each product should have a title, image and price.
 
-##### STR-US2. As a user, I would like to view only 8 products on a page
+---
+
+#### STR-US2. As a user, I would like to view only 8 products on a page
 
 Acceptance criteria:
 
@@ -44,7 +46,9 @@ Acceptance criteria:
 3. The product results should be paginated and there should be a next and previous button at the bottom of the product list to
    navigate to next page and show next 8 products.
 
-##### STR-US3. As a user, when I click on a product on the dashboard, it should me the details of the product
+---
+
+#### STR-US3. As a user, when I click on a product on the dashboard, it should me the details of the product
 
 Acceptance criteria:
 
@@ -67,10 +71,14 @@ Acceptance criteria:
 - These details should persist when the user is navigated back to the dashboard
 - [BONUS]: In the Navbar, you can display the total number of products in the cart.
 
-##### STR-US4. As a user, I would like to sort products on dashboard in either accending or descending order\*\*
+---
+
+#### STR-US4. As a user, I would like to sort products on dashboard in either accending or descending order\*\*
 
 Acceptance criteria:
 
 1. Add a dropdown, with options to Sort - ASC, Sort-DESC.
 2. The dropdown should be added below the navbar and floated to right. You can use `flex justify-content-end` class or `float:right`.
 3. When the user chooses `SORT-ASC` the products should be sorted by their price in ascending order. When user chooses `SORT-DESC` the products on dashboard should be sorted according to their prices in descending order.
+
+---
