@@ -61,9 +61,10 @@ A user story is said **[Completed]** when all acceptance criteria's for the user
 
 Acceptance criteria:
 
-1. As a user I should be able login using my credentials and view the dashboard.
-2. As a user I should be able to view all the products on the dashboard.
-3. Each product should have a title, image and price.
+1. As a user I should be able to view all the products on the dashboard.
+2. Each product should have a title, image and price.
+3. When a user clicks on the product image, it opens a modal with product details.
+4. When I click on `Add to bag`, a notification with the name of the product is shown on `top-end` position.
 
 ---
 
@@ -71,10 +72,11 @@ Acceptance criteria:
 
 Acceptance criteria:
 
-1. As a user I should be able login using my credentials and view the dashboard.
-2. As a user I should be able to view only 8 products per page on the dashboard.
-3. The product results should be paginated and there should be a next and previous button at the bottom of the product list to
+1. As a user I should be able to view only 8 products per page on the dashboard.
+2. The product results should be paginated and there should be a next and previous button at the bottom of the product list to
    navigate to next page and show next 8 products.
+
+**Note: Please use the api to limit the results per page [here](https://fakestoreapi.com/docs) Products > Limit Result**
 
 ---
 
