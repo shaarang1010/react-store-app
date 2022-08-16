@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { httpRequest } from "../utils/httpRequest";
 
+/**
+ *
+ * Please refactor the below code from lines 10-14.
+ * The current implementation is using the api url directly but we would like to make this function reusable.
+ *
+ */
 const getAllProducts = async () => {
   return await httpRequest("https://fakestoreapi.com/products").catch((err) => {
     throw new Error(err.message);
