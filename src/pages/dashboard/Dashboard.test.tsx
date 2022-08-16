@@ -1,4 +1,3 @@
-import { render, screen } from "@testing-library/react";
 import { httpRequest } from "../../utils/httpRequest";
 
 // This is the section where we mock `fetch`
