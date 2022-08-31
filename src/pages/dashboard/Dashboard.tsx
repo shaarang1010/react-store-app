@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Col, Row } from "react-bootstrap";
 import { CardComponent } from "../../components/cards/Card";
 import { ModalComponent } from "../../components/modal/Modal";
@@ -24,18 +24,17 @@ const Dashboard = () => {
     setIsNotificationShown(true);
   };
 
-  const formatProductData = () => {
-    let tableData: TableData[] = [];
-    if (productSelected) {
-      tableData = [
-        { key: "description", value: productSelected.description },
-        { key: "category", value: productSelected.category },
-        { key: "rating", value: `${productSelected.rating.rate}/5` },
-        { key: "users purchased", value: productSelected.rating.count },
-      ];
-    }
-    return tableData;
-  };
+  const formatProductData = useCallback(
+    () => !productSelected 
+      ? []
+      : [
+          { key: "description", value: productSelected.description },
+          { key: "category", value: productSelected.category },
+          { key: "rating", value: `${productSelected.rating.rate}/5` },
+          { key: "users purchased", value: productSelected.rating.count },
+        ],
+    [productSelected],
+  );
 
   return (
     <>
