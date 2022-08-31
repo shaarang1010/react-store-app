@@ -10,23 +10,23 @@ type TableComponentProps = {
   tableData: TableData[] | [];
 };
 
-export const TableComponent: React.FC<TableComponentProps> = ({
-  tableData,
-}) => {
-  return (
-    <Table striped bordered hover>
-      <tbody>
-        {tableData.map((data, index) => {
-          return (
-            <tr key={index}>
-              <td colSpan={4}>{`${data.key
-                .charAt(0)
-                .toUpperCase()}${data.key.slice(1)}`}</td>
-              <td>{data.value}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </Table>
-  );
-};
+export const TableComponent: React.FC<TableComponentProps> = React.memo(
+  ({ tableData }) => {
+    return (
+      <Table striped bordered hover>
+        <tbody>
+          {tableData.map((data, index) => {
+            return (
+              <tr key={index}>
+                <td colSpan={4}>{`${data.key
+                  .charAt(0)
+                  .toUpperCase()}${data.key.slice(1)}`}</td>
+                <td>{data.value}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </Table>
+    );
+  },
+);
