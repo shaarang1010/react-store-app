@@ -13,16 +13,6 @@ const Dashboard = () => {
   const { data: listOfProducts, error } = useApi<Product[]>();
   const [isNotificationShown, setIsNotificationShown] = useState(false);
 
-  const onCardImageClickHandler = (product: Product) => {
-    setProductSelected(product);
-    setIsModalOpen(true);
-    formatProductData();
-  };
-
-  const onAddProductHandler = (product: Product) => {
-    setProductSelected(product);
-    setIsNotificationShown(true);
-  };
 
   const formatProductData = useCallback(
     () => !productSelected 
@@ -34,6 +24,23 @@ const Dashboard = () => {
           { key: "users purchased", value: productSelected.rating.count },
         ],
     [productSelected],
+  );
+
+  const onAddProductHandler = useCallback(
+    (product: Product) => {
+      setProductSelected(product);
+      setIsNotificationShown(true);
+    },
+    [setProductSelected, setIsNotificationShown],
+  );
+
+  const onCardImageClickHandler = useCallback(
+    (product: Product) => {
+      setProductSelected(product);
+      setIsModalOpen(true);
+      formatProductData();
+    },
+    [setProductSelected, setIsModalOpen, formatProductData],
   );
 
   return (
