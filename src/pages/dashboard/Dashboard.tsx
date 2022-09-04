@@ -13,18 +13,18 @@ const Dashboard = () => {
   const { data: listOfProducts, error } = useApi<Product[]>();
   const [isNotificationShown, setIsNotificationShown] = useState(false);
 
-  const formatProductData = () => {
-    let tableData: TableData[] = [];
-    if (productSelected) {
-      tableData = [
-        { key: "description", value: productSelected.description },
-        { key: "category", value: productSelected.category },
-        { key: "rating", value: `${productSelected.rating.rate}/5` },
-        { key: "users purchased", value: productSelected.rating.count },
-      ];
-    }
-    return tableData;
-  };
+
+  const formatProductData = useCallback(
+    () => !productSelected 
+      ? []
+      : [
+          { key: "description", value: productSelected.description },
+          { key: "category", value: productSelected.category },
+          { key: "rating", value: `${productSelected.rating.rate}/5` },
+          { key: "users purchased", value: productSelected.rating.count },
+        ],
+    [productSelected],
+  );
 
   const onAddProductHandler = useCallback(
     (product: Product) => {
